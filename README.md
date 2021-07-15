@@ -72,3 +72,7 @@ Equi Join 동일 칼럼을 기준으로 조인합니다.
 Non-Equi Join 동일 칼럼이 없이 다른 조건을 사용하여 조인합니다.   
 Outer Join 조인 조건에 만족하지 않는 행도 나타낸다.   
 Self Join 한 테이블 내에서 조인합니다.   
+
+
+## Graph DB
+https://couplewith.tistory.com/entry/Graph-DB-%EC%99%80-RDBMS-%ED%8A%B8%EB%9E%9C%EB%93%9C-3%EB%B6%80-%EA%B7%B8%EB%9E%98%ED%94%84-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%EC%9D%98-%EC%A2%85%EB%A5%98
