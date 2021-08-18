@@ -1,10 +1,19 @@
 # Database-Study
 
-## ORM (SqlAlchemy)
-https://edykim.com/ko/post/getting-started-with-sqlalchemy-part-1/
-
-## SQL(Structured Query Language)
+# SQL(Structured Query Language)
 데이터베이스에 저장된 데이터를 조회, 입력, 수정 삭제하는 등의 조작이나, 테이블을 비롯한 다양한 객체(시퀀스. 인덱스 등)를 생성 및 제어하는 역할을 합니다. 
+
+## 유용한 자료
+SQL Cheat Sheet: https://www.sqltutorial.org/sql-cheat-sheet/   
+실제 데이터로 쿼리를 사용하는 실습: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all   
+
+## SQL 문법 해석 우선순위
+- SELECT column_name(s) : 5   
+- FROM table_name : 1   
+- WHERE condition : 2   
+- GROUP BY column_name(s) : 3   
+- HAVING condition : 4   
+- ORDER BY column_name(s) : 6   
 
 ## SQL의 종류
 - 데이터 정의어(DDL)   
@@ -27,7 +36,7 @@ DCL: GRANT, REVOKE
 NOT NULL:  NULL을 허용하지 않는다.   
 UNIQUE: 중복된 값을 허용하지 않는다. 항상 유일한 값   
 PRIMARY KEY: NULL을 허용하지 않고 중복된 값을 허용하지 않는다.   
-NOT NULL 조건과 UNIQUE 조건을 결합한 형태   
+NOT NULL: 조건과 UNIQUE 조건을 결합한 형태   
 FOREIGN KEY: 부모 테이블의 참조되는 칼럼 값이 존재하면 허용   
 CHECK: 저장 가능한 데이터 값의 범위나 조건을 지정하여 설정한 값만을 허용   
 
@@ -44,7 +53,7 @@ CHECK: 저장 가능한 데이터 값의 범위나 조건을 지정하여 설정
 
 ## 데이터 딕셔너리 (Data Dictionary)
 관계형 데이터베이스에서 객체를 정의하게 되면 그 객체가 가진 메타데이터(객체에 대한 정보들-예를들면 테이블 객체일 경우 컬럼, 도메인 및 제약조건에 대한 내용) 의 정보가 저장되는 시스템 테이블
-데이터 딕셔너리는 사용자가 테이블을 생성하거나 사용자를 변경하는 등의 작업을 할 때 데이터베이스 서버에 의해 자동으로 갱신되는 테이블로 사용자는 데이터 딕셔너리의 내용을 직접 수정하거나 삭제 할 수 없습니다.   
+데이터 딕셔너리는 사용자가 테이블을 생성하거나 사용자를 변경하는 등의 작업을 할 때 데이터베이스 서버에 의해 자동으로 갱신되는 테이블로 사용자는 데이터 딕셔너리의 내용을 직접 수정하거나 삭제할 수 없습니다.   
 오라클은 사용자가 이해할 수 있는 데이터를 산출해 줄 수 있도록 하기 위해서 데이터 딕셔너리에서 파생한 데이터딕셔너리 뷰를 제공   
 
 ## VIEW  
@@ -53,7 +62,7 @@ CHECK: 저장 가능한 데이터 값의 범위나 조건을 지정하여 설정
 사용자에게 주어진 뷰를 통해서 기본 테이블을 제한적으로 사용하게 됩니다.   
 뷰는 이미 존재하고 있는 테이블에 제한적으로 접근하도록 합니다.   
 뷰를 생성하기 위해서는 실질적으로 데이터를 저장하고 있는 물리적인 테이블이 존재해야 하는데 이 테이블을 기본 테이블이라고 합니다.  데이터를 물리적으로 저장하고 있지 않습니다.   
-쓰는 이유: 복잡하고 긴 쿼리문을 뷰로 정의하면 접근을 단순화시킬 수 있다.  보안에 유리하다.   
+> View 테이블을 쓰는 이유: 복잡하고 긴 쿼리문을 뷰로 정의하면 접근을 단순화시킬 수 있다. 보안에 유리하다.   
 
 ## Set Operator  
 두 개 이상의 쿼리 결과를 하나로 결합하는 연산자   
